@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import logo from './styled-components-logo.png';
 import styled from 'styled-components';
 
 import * as tokens from '../../style-dictionary-dist/variables.js';
 
 const Box = styled.div({
   display: 'flex',
-  flexDirection: 'row',
+  flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'flex-start',
   margin: `${tokens.SpacingMedium} auto 0`,
@@ -15,46 +14,110 @@ const Box = styled.div({
   borderRadius: '10px',
 });
 
-const Media = styled.img`
-  flex: 0 0 auto;
-  display: block;
-  width: 100px;
-  height: 100px;
-`;
-
-const Text = styled.div({
-  marginLeft: tokens.SpacingLarge,
-  fontFamily: tokens.FontFamilyBase,
-  fontSize: tokens.SizeTextBase,
-  textAlign: 'left',
-  color: tokens.ColorText,
-});
-
 const Description = styled.h3({
   margin: `0 0 ${tokens.SpacingSmall} 0`,
   fontSize: tokens.SizeTextLarge,
 });
 
-const Reference = styled.p({
-  margin: 0,
-  fontFamily: tokens.FontFamilyCode,
-});
+const WorkdayButton = styled.button`
+  font-family: ${tokens.FontFamilyBase};
+  font-size: ${tokens.SizeTextBase};
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid ${tokens.ColorBlackPepper600};
+  border-radius: 4px;
+  padding: ${tokens.SpacingXs} ${tokens.SpacingM};
 
-const Link = styled.a({
-  color: tokens.ColorBasePrimary,
-});
+  &:focus {
+    border: 1px solid ${tokens.ColorBlueberry400};
+  }
+
+  &:hover {
+    background-color: ${tokens.ColorBlackPepper100};
+  }
+`;
+
+const WorkdayPrimaryButton = styled.button`
+  font-family: ${tokens.FontFamilyBase};
+  font-size: ${tokens.SizeTextBase};
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid ${tokens.ColorBlackPepper600};
+  border-radius: 4px;
+  padding: ${tokens.SpacingXs} ${tokens.SpacingM};
+  background-color: ${tokens.ColorBlueberry400};
+  color: ${tokens.ColorFrenchVanilla100};
+
+  &:focus {
+    border: 1px solid ${tokens.ColorBlueberry400};
+  }
+
+  &:hover {
+    background-color: ${tokens.ColorBlueberry300};
+  }
+`;
+
+const NetflixButton = styled.button`
+  font-family: ${tokens.FontFamilyBase};
+  font-size: ${tokens.SizeTextBase};
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid ${tokens.ColorCinnamon600};
+  border-radius: 4px;
+  padding: ${tokens.SpacingXs} ${tokens.SpacingM};
+
+  &:focus {
+    border: 1px solid ${tokens.ColorBlueberry400};
+  }
+
+  &:hover {
+    background-color: ${tokens.ColorCinnamon300};
+  }
+`;
+
+const NetflixPrimaryButton = styled.button`
+  font-family: ${tokens.FontFamilyBase};
+  font-size: ${tokens.SizeTextBase};
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid ${tokens.ColorCinnamon600};
+  border-radius: 4px;
+  padding: ${tokens.SpacingXs} ${tokens.SpacingM};
+  background-color: ${tokens.ColorCinnamon600};
+  color: ${tokens.ColorFrenchVanilla100};
+
+  &:focus {
+    border: 1px solid ${tokens.ColorBlueberry400};
+  }
+
+  &:hover {
+    background-color: ${tokens.ColorCinnamon500};
+  }
+`;
 
 class MyComponent extends Component {
   render() {
     return (
       <Box>
-          <Media src={logo} alt="Styled Components logo" />
-          <Text>
-            <Description>
-              This component is styled with Styled Components and Style Dictionary tokens
-            </Description>
-            <Reference>More information about Styled Components: <Link href="https://www.styled-components.com/" target="_blank" rel="noopener noreferrer">styled-components.com</Link></Reference>
-          </Text>
+        <Description>Example uses Styled Components</Description>
+        <div style={{ display: 'flex' }}>
+          <WorkdayPrimaryButton style={{ float: 'left' }}>Workday</WorkdayPrimaryButton>
+          <WorkdayButton style={{ float: 'right', marginLeft: '20px' }}>Workday</WorkdayButton>
+          <NetflixPrimaryButton style={{ float: 'right', marginLeft: '20px' }}>Netflix</NetflixPrimaryButton>
+          <NetflixButton style={{ float: 'right', marginLeft: '20px' }}>Netflix</NetflixButton>
+        </div>
       </Box>
     );
   }

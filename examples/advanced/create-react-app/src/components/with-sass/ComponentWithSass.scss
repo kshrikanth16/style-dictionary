@@ -3,7 +3,7 @@
 
 .component {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   margin: $token-spacing-medium auto 0;
@@ -12,32 +12,96 @@
   border-radius: 10px;
 }
 
-.component-media {
-  flex: 0 0 auto;
-  display: block;
-  width: 100px;
-  height: 100px;
-}
-
-.component-text {
-  margin-left: $token-spacing-large;
-  font-family: $token-font-family-base;
-  font-size: $token-size-text-base;
-  text-align: left;
-  color: $token-color-text;
-}
-
 .component-text__description {
   margin: 0 0 $token-spacing-small 0;
   font-size: $token-size-text-large;
 }
 
-.component-text__reference {
-  margin: 0;
+.buttonTestStyling {
   font-family: $token-font-family-code;
+  font-size: $token-size-text-base;
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $token-color-black-pepper-600;
+  border-radius: 4px;
+  padding: $token-spacing-xs $token-spacing-m;
+
+  &:focus {
+    border: 1px solid $token-color-blueberry-400;
+  }
+
+  &:hover {
+    background-color: $token-color-black-pepper-100;
+  }
 }
 
-.component-link {
-  color: $token-color-base-primary;
+.buttonTestStyling-Workday-Primary {
+  font-family: $token-font-family-code;
+  font-size: $token-size-text-base;
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $token-color-black-pepper-600;
+  border-radius: 4px;
+  padding: $token-spacing-xs $token-spacing-m;
+  background-color: $token-color-blueberry-400;
+  color: $token-color-french-vanilla-100;
+
+  &:focus {
+    border: 1px solid $token-color-blueberry-400;
+  }
+
+  &:hover {
+    background-color: $token-color-blueberry-300;
+  }
+}
+
+.buttonTestStyling-Netflix {
+  font-family: $token-font-family-code;
+  font-size: $token-size-text-base;
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $token-color-cinnamon-600;
+  border-radius: 4px;
+  padding: $token-spacing-xs $token-spacing-m;
+
+  &:focus {
+    border: 1px solid $token-color-blueberry-400;
+  }
+
+  &:hover {
+    background-color: $token-color-cinnamon-300;
+  }
+}
+
+.buttonTestStyling-Netflix-Primary {
+  font-family: $token-font-family-code;
+  font-size: $token-size-text-base;
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $token-color-cinnamon-600;
+  border-radius: 4px;
+  padding: $token-spacing-xs $token-spacing-m;
+  background-color: $token-color-cinnamon-600;
+  color: $token-color-french-vanilla-100;
+
+  &:focus {
+    border: 1px solid $token-color-blueberry-400;
+  }
+
+  &:hover {
+    background-color: $token-color-cinnamon-500;
+  }
 }
 
